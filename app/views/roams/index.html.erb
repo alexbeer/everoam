@@ -1,0 +1,27 @@
+<h1>Listing roams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roams.each do |roam| %>
+      <tr>
+        <td><%= roam.title %></td>
+        <td><%= link_to 'Show', roam %></td>
+        <td><%= link_to 'Edit', edit_roam_path(roam) %></td>
+        <td><%= link_to 'Destroy', roam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roam', new_roam_path %>

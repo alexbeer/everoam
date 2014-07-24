@@ -1,4 +1,18 @@
 Everoam2::Application.routes.draw do
+  get "profiles/show"
+  resources :roams
+
+  devise_for :users
+  root "pages#home"
+
+  devise_scope :user do
+    get 'join', to: 'devise/registrations#new'
+
+    get 'login', to: 'devise/sessions#new'
+
+    get 'customize', to: 'devise/registrations#edit'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
