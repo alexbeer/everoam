@@ -10,8 +10,12 @@ Everoam2::Application.routes.draw do
 
     get 'login', to: 'devise/sessions#new'
 
-    get 'customize', to: 'devise/registrations#edit'
+    get 'settings', to: 'devise/registrations#edit'
   end
+
+  get 'discover', to: 'pages#discover'
+
+  get '/:id', to: 'profiles#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

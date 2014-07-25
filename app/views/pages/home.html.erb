@@ -1,2 +1,93 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="jumbotron">
+
+<div id="banner">
+
+
+	<% if user_signed_in? %>
+
+	Welcome back, <%=current_user.name%>
+
+
+
+
+	<% else %>
+
+	A Place to Share Your Adventures, Big or Small
+
+	<% end %>
+
+</div>
+</div>
+
+<div id="home_image">
+
+
+
+
+
+<% if user_signed_in? %>
+
+<div id="loggedinhome">
+	<div class="loghomenavs">
+		<%= link_to "#{root_url}#{current_user.username}" do %>
+		<span class="glyphicon glyphicon-user"></span>
+		<% end %>
+	</div>
+	<div class="loghomenavs">
+		<%= link_to new_roam_path do%>
+		<span class="glyphicon glyphicon-pencil"></span>
+		<% end %>
+	</div>
+</div>
+
+<% else %>
+
+
+<div class="registrations">
+
+<div class="panel-body">
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= devise_error_messages! %>
+
+
+
+<div class="form-group">
+
+	<%= f.text_field :name, class: "form-control", :autofocus => true, placeholder: "Full Name" %>
+</div>
+
+	<div class="form-group">
+
+	<%= f.text_field :username, class: "form-control", :autofocus => true, placeholder:"Username" %></div>
+
+
+	<div class="form-group">
+
+	<%= f.email_field :email, class: "form-control", :autofocus => true, placeholder:"Email" %></div>
+
+	<div class="form-group">
+
+	<%= f.password_field :password, class: "form-control", placeholder:"Password" %>
+	</div>
+
+	<div class="form-group">
+	<%= f.password_field :password_confirmation, class: "form-control",  placeholder:"Password Confirmation" %>
+	</div>
+
+	<%= f.submit "Sign up", class: "btn btn-primary" %>
+<% end %>
+
+
+<span class="twelve">By signing up, you agree to our </span>
+<% end %>
+
+</div>
+</div>
+
+
+
+
+
+</div>

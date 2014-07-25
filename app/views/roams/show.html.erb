@@ -1,9 +1,116 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+<p id="notice"></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @roam.title %>
-</p>
+<div class="text-center">
+<br>
+<h4><%= @roam.title %></h4>
 
-<%= link_to 'Edit', edit_roam_path(@roam) %> |
-<%= link_to 'Back', roams_path %>
+
+<p><%=@roam.location %></p>
+
+<br>
+<%= image_tag @roam.image.url(:large) %>
+<br><br>
+<p><%= @roam.description %></p>
+<br/>
+
+
+
+
+<% if @roam.imagetwo.file? %>
+<%= image_tag @roam.imagetwo.url(:large) %>
+<br><br>
+<p><%= @roam.descriptiontwo %></p>
+<br/>
+<% end %>
+
+
+<% if @roam.imagethree.file? %>
+<%= image_tag @roam.imagethree.url(:large) %>
+<br><br>
+<p><%= @roam.descriptionthree %></p>
+<br/>
+<% end %>
+
+<% if @roam.imagefour.file? %>
+<%= image_tag @roam.imagefour.url(:large) %>
+<br><br/>
+<p><%= @roam.descriptionfour %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imagefive.file? %>
+<%= image_tag @roam.imagefive.url(:large) %>
+<br/><br>
+<p><%= @roam.descriptionfive %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imagesix.file? %>
+<%= image_tag @roam.imagesix.url(:large) %>
+<br><br>
+<p><%= @roam.descriptionsix %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imageseven.file? %>
+<%= image_tag @roam.imageseven.url(:large) %>
+<br/><br>
+<p><%= @roam.descriptionseven %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imageeight.file? %>
+<%= image_tag @roam.imageeight.url(:large) %>
+<br/><br>
+<p><%= @roam.descriptioneight %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imagenine.file? %>
+<%= image_tag @roam.imagenine.url(:large) %>
+<br><br>
+<p><%= @roam.descriptionnine %></p>
+<br/>
+<% end %>
+
+
+
+<% if @roam.imageten.file? %>
+<%= image_tag @roam.imageten.url(:large) %>
+<br/><br>
+<p><%=@roam.descriptionten%></p>
+<% end %>
+
+
+
+</div>
+
+<hr>
+
+<%= link_to @roam.user.username, "#{root_url}#{@roam.user.username}" if @roam.user %>
+
+
+<% if @roam.user == current_user %>
+	| <%= link_to 'edit', edit_roam_path(@roam) %>
+
+<%end %>
+<div class="float_right">
+
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+<hr>
+</div>

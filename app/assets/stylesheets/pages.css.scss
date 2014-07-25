@@ -1,3 +1,185 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#banner{
+	height:40px;
+	line-height:40px;
+	font-size:26px;
+	letter-spacing:2px;
+	font-weight:lighter;
+	margin-top:25px;
+	text-align:center;
+}
+#betatag{
+
+
+	height:60px;
+	line-height:65px;
+	margin-left:10px;
+	font-size:14px;
+	float:left;
+	color:black;
+
+
+}
+#home_image{
+	background:image-url('longhills.jpg');
+	background-size: cover;
+	height:1000px;
+	width:100%;
+}
+#loggedinhome{
+	height:100px;
+	width:200px;
+	margin:auto;
+	text-align:center;
+	font-size:24px;
+	line-height:160px;
+}
+#loggedinhome a{
+	text-decoration:none;
+}
+.glyphsline a:hover{
+	text-decoration:none;
+}
+.loghomenavs{
+	display:inline;
+	margin:10px;
+}
+.top_word{
+	height:60px;
+	line-height:80px;
+	text-align:center;
+	width:200px;
+	margin:auto;
+	font-size:24px;
+	color:#e74c3c;
+	font-family:helvetica;
+	font-weight:lighter;
+	letter-spacing:1px;
+}
+.others_top{
+	font-size:12px;
+	float:right;
+	line-height:80px;
+	margin-right:20px;
+	font-size:15px;
+}
+.terms{
+	font-size:16px;
+}
+.pages_text{
+	width:75%;
+	height:800px;
+	margin:auto;
+	margin-top:20px;
+	color:#34495e;
+	font-size:20px;
+	font-weight:lighter;
+	font-family:helvetica;
+}
+.q{
+	color:#c0392b;
+}
+#footer{
+	width:100%;
+	position:absolute;
+	text-align:center;
+	font-size:15px;
+	margin:auto;
+	bottom:0;
+}
+
+.foot_nav{
+
+	margin-right:10px;
+	margin-left:10px;
+	display:inline-block;
+}
+.foot_nav a{
+	color:white;
+}
+
+.pages_nav{
+	display:inline;
+	margin-left:5px;
+}
+
+
+#soonbox{
+	margin:auto;
+	height:550px;
+	width:800px;
+
+	margin-top:50px;
+}
+
+#soonsoon{
+	height:60px;
+	width:100%;
+	border-bottom:2px solid black;
+	text-align:center;
+	line-height:60px;
+	letter-spacing:2px;
+	font-size:35px;
+	font-family:helvetica;
+	font-weight:lighter;
+
+}
+
+#soonlogo{
+	height:200px;
+	width:200px;
+	float:left;
+	margin-top:20px;
+	border:10px solid #e74c3c;
+	text-align:center;
+
+}
+#eee{
+	font-size:150px;
+	background-color:#e74c3c;
+	color:white;
+	height:160px;
+	width:160px;
+	margin:auto;
+	margin-top:10px;
+	line-height:160px;
+	font-weight:bold;
+}
+
+#soonbrand{
+	float:right;
+	width:580px;
+	height:190px;
+	text-align:center;
+	line-height:200px;
+	font-size:130px;
+	margin-top:20px;
+	font-family:helvetica;
+	font-weight:lighter;
+	color:#e74c3c;
+}
+
+#soondescription{
+	width:580px;
+	height:100px;
+	float:right;
+	text-align:center;
+	font-size:50px;
+	font-family:helvetica;
+	font-weight:lighter;
+
+}
+.overh{
+	font-weight:bold;
+	font-family:helvetica;
+	font-size:12px;
+	border-bottom:1px solid;
+	width:200px;
+}
+.underh{
+	font-weight:lighter;
+	font-size:16px;
+}

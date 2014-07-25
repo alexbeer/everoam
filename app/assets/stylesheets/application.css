@@ -11,3 +11,91 @@
  *= require_self
  *= require_tree .
  */
+
+.center{
+	text-align:center;
+}
+
+.registrations{
+	margin:auto;
+  margin-top:35px;
+	width:300px;
+  height:320px;
+	font-family:Helvetica;
+  border-radius:10px;
+  background-color:rgba(240,240,240,.7);
+}
+.login_registrations{
+  margin:auto;
+  margin-top:30px;
+  width:300px;
+  height:320px;
+  font-family:Helvetica;
+}
+.edit_registrations{
+	margin:auto;
+	margin-top:40px;
+	width:500px;
+}
+.twelve{
+	font-size:10px;
+  font-weight:bold;
+}
+.float_right{
+	float:right;
+}
+.float_left{
+	float:left;
+}
+.smallhead{
+  font-size:10px;
+  font-family:Helvetica;
+  font-weight:bold;
+  line-height:60px;
+  margin-left:10px;
+}
+.brand{
+	line-height:60px;
+	font-size:22px;
+	color:#e74c3c;
+	font-weight:lighter;
+  letter-spacing:1px;
+  font-family:helvetica;
+
+}
+.logo{
+	display:inline;
+	float:left;
+}
+.brand:hover{
+	text-decoration:none;
+	color: rgba(255,100,61,0.9);
+}
+body a{
+	color:rgba(5,10,6,0.6);
+}
+body a:hover{
+	color:rgba(255,100,61,0.7);
+  text-decoration:none;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select';
+  display: inline-block;
+  border: 1px solid green;
+  padding: 5px;
+  text-align:center;
+  width:80px;
+  font-size: 14px;
+  color:green;
+
+
+}
+.custom-file-input:hover::before {
+  background-color:green;
+  color:white;
+  cursor:hand;
+
+}

@@ -1,10 +1,55 @@
 
 
+$alert-border-radius: 0px;
 
+$alert-info-bg: white;
 
+$state-info-border: white;
 
+$dropdown-link-hover-bg:rgba(255,149,61,0.1);
 
+$navbar-height:60px;
+
+$jumbotron-padding:0px;
+
+$jumbotron-bg:white;
+
+$panel-default-color:white;
+
+$body-bg:white;
+
+$navbar-default-bg:white;
+
+$navbar-default-link-color:black;
+
+$navbar-default-link-hover-color:rgba(255,149,61,0.9);
+
+$navbar-default-link-hover-bg:rgba(255,149,61,0.1);
+
+$navbar-border-radius:0px;
+
+$btn-primary-bg:white;
+
+$btn-primary-color:#e74c3c;
+
+$navbar-margin-bottom:0px;
+
+$input-border:rgba(210,210,210,.9);
+
+$input-border-focus:rgba(232,77,60,0.1);
+
+$btn-primary-border:#e74c3c;
+
+$btn-warning-bg: #e74c3c;
 
 
 
 @import 'bootstrap';
+
+
+.btn-primary:hover {
+
+  background-color: white;
+  border:1px solid #e74c3c;
+
+}

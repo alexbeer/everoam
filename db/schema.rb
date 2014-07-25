@@ -11,13 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724160910) do
+ActiveRecord::Schema.define(version: 20140724192819) do
 
   create_table "roams", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "imagetwo_file_name"
+    t.string   "imagetwo_content_type"
+    t.integer  "imagetwo_file_size"
+    t.datetime "imagetwo_updated_at"
+    t.string   "imagethree_file_name"
+    t.string   "imagethree_content_type"
+    t.integer  "imagethree_file_size"
+    t.datetime "imagethree_updated_at"
+    t.string   "imagefour_file_name"
+    t.string   "imagefour_content_type"
+    t.integer  "imagefour_file_size"
+    t.datetime "imagefour_updated_at"
+    t.string   "imagefive_file_name"
+    t.string   "imagefive_content_type"
+    t.integer  "imagefive_file_size"
+    t.datetime "imagefive_updated_at"
+    t.string   "imagesix_file_name"
+    t.string   "imagesix_content_type"
+    t.integer  "imagesix_file_size"
+    t.datetime "imagesix_updated_at"
+    t.string   "imageseven_file_name"
+    t.string   "imageseven_content_type"
+    t.integer  "imageseven_file_size"
+    t.datetime "imageseven_updated_at"
+    t.string   "imageeight_file_name"
+    t.string   "imageeight_content_type"
+    t.integer  "imageeight_file_size"
+    t.datetime "imageeight_updated_at"
+    t.string   "imagenine_file_name"
+    t.string   "imagenine_content_type"
+    t.integer  "imagenine_file_size"
+    t.datetime "imagenine_updated_at"
+    t.string   "imageten_file_name"
+    t.string   "imageten_content_type"
+    t.integer  "imageten_file_size"
+    t.datetime "imageten_updated_at"
+    t.string   "description"
+    t.string   "descriptiontwo"
+    t.string   "descriptionthree"
+    t.string   "descriptionfour"
+    t.string   "descriptionfive"
+    t.string   "descriptionsix"
+    t.string   "descriptionseven"
+    t.string   "descriptioneight"
+    t.string   "descriptionnine"
+    t.string   "descriptionten"
+    t.string   "location"
   end
 
   add_index "roams", ["user_id"], name: "index_roams_on_user_id"
@@ -35,9 +86,12 @@ ActiveRecord::Schema.define(version: 20140724160910) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

@@ -5,8 +5,7 @@ class RoamsController < ApplicationController
 
 
   def index
-    @roams = Roam.all #.paginate(:page => params[:page], :per_page => 12)
-
+    @roams = Roam.all
   end
 
   def show
@@ -54,8 +53,8 @@ class RoamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roam_params
-      params.require(:roam).permit(:title, :location, :description, :description2, :description3, :description4, :description5,
-        :description6, :description7, :description8, :description9, :description10,
-       :image, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10  )
+      params.require(:roam).permit(:title, :location, :description, :descriptiontwo, :descriptionthree, :descriptionfour, :descriptionfive,
+        :descriptionsix, :descriptionseven, :descriptioneight, :descriptionnine, :descriptionten,
+       :image, :imagetwo, :imagethree, :imagefour, :imagefive, :imagesix, :imageseven, :imageeight, :imagenine, :imageten  )
     end
 end
