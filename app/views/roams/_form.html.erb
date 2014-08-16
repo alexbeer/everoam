@@ -1,3 +1,4 @@
+
 <%= form_for(@roam) do |f| %>
   <% if @roam.errors.any? %>
     <div id="error_explanation">
@@ -20,127 +21,75 @@
     <div class="form-group">
       <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
     </div>
-  </div>
+
+
+
+
+
       <%= f.file_field :image, class: "custom-file-input"  %>
-          <br>
+
       <%= f.text_field :description, class: "form-control", placeholder: "Caption" %>
-  <br>
-  <br>
-      <a onclick="document.getElementById('formtwo').style.display='';return false;"
-href="" class="glyphicon glyphicon-plus";></a>
-  <div id="formtwo" style="display:none">
-<div class="formform">
-        <%= f.file_field :imagetwo, class: "custom-file-input" %>
-  <br>
-        <%= f.text_field :descriptiontwo, class: "form-control", placeholder: "Caption" %>
-        <a onclick="document.getElementById('formtwo').style.display='none';return false;" href=""
-        class="glyphicon glyphicon-minus"></a>
+
+
+<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+  simple collapsible
+</button>
+
+<div id="demo" class="collapse">
+  <%= f.file_field :imagetwo, class: "custom-file-input" %>
+
+  <%= f.text_field :descriptiontwo, class: "form-control", placeholder: "Caption" %>
+
+
 </div>
-  <a onclick="document.getElementById('formthree').style.display='';return false;"
-  href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formthree" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imagethree, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionthree, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formthree').style.display='none';return false;" href=""
-    class="glyphicon glyphicon-minus"></a>
-  </div>
-    <a onclick="document.getElementById('formfour').style.display='';return false;"
-    href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formfour" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imagefour, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionfour, class: "form-control", placeholder: "Caption" %>
-      <a onclick="document.getElementById('formfour').style.display='none';return false;" href=""
-      class="glyphicon glyphicon-minus"></a>
-    </div>
-      <a onclick="document.getElementById('formfive').style.display='';return false;"
-      href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formfive" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imagefive, class: "custom-file-input" %>
-  <br>
+
+
+
+
+
+      <%= f.file_field :imagethree, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionthree, class: "form-control", placeholder: "Caption" %>
+
+
+
+      <%= f.file_field :imagefour, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionfour, class: "form-control", placeholder: "Caption" %>
+
+
+
+      <%= f.file_field :imagefive, class: "custom-file-input" %>
+
       <%= f.text_field :descriptionfive, class: "form-control", placeholder: "Caption" %>
-      <a onclick="document.getElementById('formfive').style.display='none';return false;" href=""
-      class="glyphicon glyphicon-minus"></a>
-  </div>
-    <a onclick="document.getElementById('formsix').style.display='';return false;"
-    href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formsix" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imagesix, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionsix, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formsix').style.display='none';return false;" href=""
-    class="glyphicon glyphicon-minus"></a>
-  </div>
-    <a onclick="document.getElementById('formseven').style.display='';return false;"
-    href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formseven" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imageseven, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionseven, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formseven').style.display='none';return false;"
-     href="" class="glyphicon glyphicon-minus"></a>
-  </div>
-  <a onclick="document.getElementById('formeight').style.display='';return false;"
-  href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formeight" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imageeight, class: "custom-file-input" %>
-    <br>
-    <%= f.text_field :descriptioneight, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formeight').style.display='none';return false;" href=""
-    class="glyphicon glyphicon-minus"></a>
-  </div>
-    <a onclick="document.getElementById('formnine').style.display='';return false;"
-    href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formnine" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imagenine, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionnine, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formnine').style.display='none';return false;" href=""
-    class="glyphicon glyphicon-minus"></a>
-  </div>
-  <a onclick="document.getElementById('formten').style.display='';return false;"
-  href="" class="glyphicon glyphicon-plus";></a>
-</div>
-  <br>
-  <br>
-<div id="formten" style="display:none">
-  <div class="formform">
-    <%= f.file_field :imageten, class: "custom-file-input" %>
-  <br>
-    <%= f.text_field :descriptionten, class: "form-control", placeholder: "Caption" %>
-    <a onclick="document.getElementById('formten').style.display='none';return false;" href=""
-    class="glyphicon glyphicon-minus"></a>
-  </div>
-</div>
+
+
+
+      <%= f.file_field :imagesix, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionsix, class: "form-control", placeholder: "Caption" %>
+
+
+      <%= f.file_field :imageseven, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionseven, class: "form-control", placeholder: "Caption" %>
+
+
+      <%= f.file_field :imageeight, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptioneight, class: "form-control", placeholder: "Caption" %>
+
+
+
+      <%= f.file_field :imagenine, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionnine, class: "form-control", placeholder: "Caption" %>
+
+
+
+      <%= f.file_field :imageten, class: "custom-file-input" %>
+
+      <%= f.text_field :descriptionten, class: "form-control", placeholder: "Caption" %>
 
   <br>
   <br>

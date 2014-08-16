@@ -1,5 +1,8 @@
 
-<div class="jumbotron">
+
+<body class="home_image">
+
+
 
 <div id="banner">
 
@@ -17,12 +20,8 @@
 
 	<% end %>
 
+
 </div>
-</div>
-
-<div id="home_image">
-
-
 
 
 
@@ -72,22 +71,23 @@
 	<%= f.password_field :password, class: "form-control", placeholder:"Password" %>
 	</div>
 
-	<div class="form-group">
-	<%= f.password_field :password_confirmation, class: "form-control",  placeholder:"Password Confirmation" %>
-	</div>
+	
 
 	<%= f.submit "Sign up", class: "btn btn-primary" %>
 <% end %>
 
 
-<span class="twelve">By signing up, you agree to our </span>
+<span class="twelve">By signing up, you agree to our <%= link_to "policies", policies_path %></span>
 <% end %>
 
 </div>
+
+
+
+
+
+
 </div>
 
-
-
-
-
-</div>
+</body>
+<%= render 'layouts/footer' %>

@@ -2,7 +2,7 @@
 
   <div class="panel-body">
 
-      <h3>Login</h3>
+      <p class="join">Login</p>
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
       <div class="form-group">
@@ -14,19 +14,11 @@
         <%= f.password_field :password, class: "form-control", placeholder:"Password"%>
       </div>
 
-      <div class="form-group">
-        <div class="checkbox">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-
-      </div>
 	<div class="form-group">
         <%= f.submit "login", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
-  <i><%= render "devise/shared/links" %></i>
+  <div id="forgot_pass"><%= render "devise/shared/links" %></div>
  </div>
-
 </div>

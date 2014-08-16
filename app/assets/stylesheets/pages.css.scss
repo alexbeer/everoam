@@ -3,14 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #banner{
-	height:40px;
-	line-height:40px;
-	font-size:26px;
+	height:150px;
+	line-height:150px;
+	font-size:30px;
 	letter-spacing:2px;
 	font-weight:lighter;
 	margin-top:25px;
 	text-align:center;
+	margin:auto;
+	
+
+
 }
+
+
 #betatag{
 
 
@@ -23,11 +29,16 @@
 
 
 }
-#home_image{
-	background:image-url('longhills.jpg');
-	background-size: cover;
-	height:1000px;
-	width:100%;
+.home_image{
+	background:image-url('foggylake.jpg')  no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+
 }
 #loggedinhome{
 	height:100px;
@@ -125,6 +136,12 @@
 	font-size:35px;
 	font-family:helvetica;
 	font-weight:lighter;
+
+}
+
+#forgot_pass{
+	margin-left:15px;
+	margin-top:-30px;
 
 }
 

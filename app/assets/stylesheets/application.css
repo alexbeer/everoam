@@ -9,29 +9,62 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require 'masonry/transitions'
  *= require_tree .
  */
 
 .center{
 	text-align:center;
 }
+.join{
+	font-size:20px;
+}
+.footer{
+	height:50px;
+	margin-top:120px;
+	width:290px;
+	background-color:rgba(240,240,240,.1);
+}
 
+.footies{
+	display:inline;
+	color:white;
+	line-height:50px;
+	margin-left:10px;
+}
+.footies a{
+	color:rgba(255,255,255,.8);
+
+}
 .registrations{
 	margin:auto;
-  margin-top:35px;
 	width:300px;
-  height:320px;
+
 	font-family:Helvetica;
-  border-radius:10px;
-  background-color:rgba(240,240,240,.7);
+  border-radius:5px;
+  background-color:rgba(240,240,240,.5);
+	border:1px solid rgba(20,140,20,.1);
 }
-.login_registrations{
+.registrationspage{
+	margin:auto;
+	width:300px;
+	font-family:Helvetica;
+	border-radius:5px;
+	background-color:rgba(240,240,240,.7);
+	margin-top:100px;
+}
+
+  .login_registrations{
   margin:auto;
   margin-top:30px;
   width:300px;
-  height:320px;
+  height:240px;
+	border-radius:5px;
+	margin-top:100px;
   font-family:Helvetica;
+	background-color:rgba(240,240,240,.7);
 }
+
 .edit_registrations{
 	margin:auto;
 	margin-top:40px;
