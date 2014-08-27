@@ -12,6 +12,9 @@
       </ul>
     </div>
   <% end %>
+
+<br>
+
 <div class="title">
   <div class="form-group" >
     <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
@@ -21,76 +24,130 @@
     <div class="form-group">
       <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
     </div>
+  </div>
+
+<div class="roamform">
 
 
-
-
-
-      <%= f.file_field :image, class: "custom-file-input"  %>
-
-      <%= f.text_field :description, class: "form-control", placeholder: "Caption" %>
-
-
-<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
-  simple collapsible
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo">
 </button>
+  <div id="demo" class="collapse">
+    <div id="formtwo">
+<br>
+    <%= f.file_field :image, class: "custom-file-input"  %>
+<br>
+    <%= f.text_field :description, class: "form-control", placeholder: "Caption" %>
+<br>
+</div>
 
-<div id="demo" class="collapse">
+
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo2">
+</button>
+  <div id="demo2" class="collapse">
+<br>
   <%= f.file_field :imagetwo, class: "custom-file-input" %>
-
+<br>
   <%= f.text_field :descriptiontwo, class: "form-control", placeholder: "Caption" %>
-
-
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo3">
+</button>
 </div>
 
 
 
+<div id="demo3" class="collapse">
+<br>
+    <%= f.file_field :imagethree, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionthree, class: "form-control", placeholder: "Caption" %>
+<br>
+    <button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo4">
+    </button>
+</div>
 
 
-      <%= f.file_field :imagethree, class: "custom-file-input" %>
 
-      <%= f.text_field :descriptionthree, class: "form-control", placeholder: "Caption" %>
-
-
-
+<div id="demo4" class="collapse">
+<br>
       <%= f.file_field :imagefour, class: "custom-file-input" %>
-
+<br>
       <%= f.text_field :descriptionfour, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo5">
+</button>
+</div>
 
 
 
-      <%= f.file_field :imagefive, class: "custom-file-input" %>
-
-      <%= f.text_field :descriptionfive, class: "form-control", placeholder: "Caption" %>
-
-
-
-      <%= f.file_field :imagesix, class: "custom-file-input" %>
-
-      <%= f.text_field :descriptionsix, class: "form-control", placeholder: "Caption" %>
-
-
-      <%= f.file_field :imageseven, class: "custom-file-input" %>
-
-      <%= f.text_field :descriptionseven, class: "form-control", placeholder: "Caption" %>
-
-
-      <%= f.file_field :imageeight, class: "custom-file-input" %>
-
-      <%= f.text_field :descriptioneight, class: "form-control", placeholder: "Caption" %>
+<div id="demo5" class="collapse">
+<br>
+    <%= f.file_field :imagefive, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionfive, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo6">
+</button>
+</div>
 
 
 
-      <%= f.file_field :imagenine, class: "custom-file-input" %>
+<div id="demo6" class="collapse">
+<br>
+    <%= f.file_field :imagesix, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionsix, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo7">
+</button>
+</div>
 
-      <%= f.text_field :descriptionnine, class: "form-control", placeholder: "Caption" %>
+
+
+<div id="demo7" class="collapse">
+<br>
+    <%= f.file_field :imageseven, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionseven, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo8">
+</button>
+</div>
 
 
 
-      <%= f.file_field :imageten, class: "custom-file-input" %>
+<div id="demo8" class="collapse">
+<br>
+    <%= f.file_field :imageeight, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptioneight, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo9">
+</button>
+</div>
 
-      <%= f.text_field :descriptionten, class: "form-control", placeholder: "Caption" %>
 
-  <br>
+
+<div id="demo9" class="collapse">
+<br>
+    <%= f.file_field :imagenine, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionnine, class: "form-control", placeholder: "Caption" %>
+<br>
+<button type="button" onclick="style.display = 'none'" class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="#demo10">
+</button>
+</div>
+
+
+
+<div id="demo10" class="collapse">
+<br>
+    <%= f.file_field :imageten, class: "custom-file-input" %>
+<br>
+    <%= f.text_field :descriptionten, class: "form-control", placeholder: "Caption" %>
+<br>
+</div>
+
   <br>
 <%= f.submit class: "btn btn-primary" %> <% end %>
+
+</div>

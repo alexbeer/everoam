@@ -13,6 +13,8 @@
  *= require_tree .
  */
 
+
+
 .center{
 	text-align:center;
 }
@@ -117,17 +119,17 @@ body a:hover{
 .custom-file-input::before {
   content: 'Select';
   display: inline-block;
-  border: 1px solid green;
+  border: 1px solid #e74c3c;
   padding: 5px;
   text-align:center;
   width:80px;
   font-size: 14px;
-  color:green;
+  color:#e74c3c;
 
 
 }
 .custom-file-input:hover::before {
-  background-color:green;
+  background-color:#e74c3c;
   color:white;
   cursor:hand;
 
