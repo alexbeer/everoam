@@ -3,7 +3,7 @@ Everoam2::Application.routes.draw do
   resources :roams
 
   devise_for :users
-  root "pages#home"
+
 
   devise_scope :user do
     get 'join', to: 'devise/registrations#new'
@@ -12,6 +12,9 @@ Everoam2::Application.routes.draw do
 
     get 'settings', to: 'devise/registrations#edit'
   end
+
+
+root "pages#home"
 
   get 'policies', to: 'pages#policies'
 
