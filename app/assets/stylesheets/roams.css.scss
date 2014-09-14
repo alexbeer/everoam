@@ -21,56 +21,23 @@
 	margin:auto;
 	width:50%;
 }
-.formform{
-	border-bottom:1px dotted orange;
 
-}
-#formtwo{
-margin:auto;
-
-
-}
-#formthree{
-
-margin-top:-20px;
-	width:100%;
-}
-#formfour{
-margin-top:-20px;
-
-	width:100%;
-}
-#formfive{
-margin-top:-20px;
-
-	width:100%;
-}
-#formsix{
-
-margin-top:-20px;
-	width:100%;
-
-}
-
-#formseven{
-margin-top:-20px;
-	width:100%;
-}
-
-#formeight{
-margin-top:-20px;
-	width:100%;
-}
-#formnine{
-margin-top:-20px;
-	width:100%;
-}
-#formten{
-margin-top:-20px;
-	width:100%;
-}
 .bottom_of_page{
 	width:100%;
 	height:40px;
 	background-color:white;
+}
+
+.buttony{
+	opacity:.5;
+}
+.buttony:hover{
+	opacity:1.0;
+}
+.glyphicon-plus{
+text-align:center;
+margin:auto;
+margin-top:4px;
+margin-left:1px;
+font-size:17px;
 }

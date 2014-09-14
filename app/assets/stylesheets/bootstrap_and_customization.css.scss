@@ -48,6 +48,7 @@ $input-border-radius:0px;
 
 
 
+
 @import 'bootstrap';
 
 
@@ -56,9 +57,11 @@ $input-border-radius:0px;
 
   background-color: white;
   border:1px solid #e74c3c;
-
 }
-
+.btn_wide{
+  width:100%;
+}
 .form-control{
   width:100%;
+
 }

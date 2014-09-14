@@ -41,7 +41,6 @@
 .registrations{
 	margin:auto;
 	width:300px;
-
 	font-family:Helvetica;
   border-radius:5px;
   background-color:rgba(240,240,240,.5);
@@ -49,22 +48,24 @@
 }
 .registrationspage{
 	margin:auto;
-	width:300px;
+	width:40%;
+	min-width:300px;
 	font-family:Helvetica;
 	border-radius:5px;
 	background-color:rgba(240,240,240,.7);
-	margin-top:100px;
+	border:1px solid rgba(210,210,210,.9) ;
 }
 
   .login_registrations{
   margin:auto;
   margin-top:30px;
-  width:300px;
-  height:240px;
+  min-width:300px;
+	width:40%;
+  height:200px;
 	border-radius:5px;
-	margin-top:100px;
   font-family:Helvetica;
 	background-color:rgba(240,240,240,.7);
+	border:1px solid rgba(210,210,210,.9) ;
 }
 
 .edit_registrations{

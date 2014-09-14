@@ -17,10 +17,5 @@ class User < ActiveRecord::Base
 
 
 
-
-
-
-
-
-        has_many :roams
+        has_many :roams, dependent: :destroy
 end
