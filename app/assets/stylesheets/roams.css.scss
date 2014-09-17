@@ -28,16 +28,30 @@
 	background-color:white;
 }
 
-.buttony{
-	opacity:.5;
+.roundbutton{
+	border-radius:180px;
+	background-color:white;
+	border:1px solid rgba(180,180,180,.9);
+	color:rgba(180,180,180,.9);
+	font-size:12px;
 }
-.buttony:hover{
-	opacity:1.0;
+.roundbutton:focus{
+	color:#e74c3c;
+	border:1px solid #e74c3c;
+
 }
+button:focus{
+	outline:0;
+	}
+
+.btn:focus{
+	outline:0;
+}
+
 .glyphicon-plus{
 text-align:center;
 margin:auto;
-margin-top:4px;
+margin-top:3px;
 margin-left:1px;
 font-size:17px;
 }
