@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915034957) do
+ActiveRecord::Schema.define(version: 20140918034156) do
 
   create_table "roams", force: true do |t|
     t.string   "title"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20140915034957) do
     t.string   "name"
     t.string   "username"
     t.string   "bio"
+    t.string   "location"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

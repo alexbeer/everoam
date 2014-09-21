@@ -1,44 +1,58 @@
 <div class="edit_registrations">
-
-<h3>Editing <%= @user.username %></h3>
+<p class="settings_header">Settings</p>
+<p class="join">Profile</p>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
 <div class="form-group">
-  <%= f.label :Name %><br />
+  <span class="customize_words">Name</span>
   <%= f.text_field :name, class: "form-control", :autofocus => true %>
 </div>
 
 <div class="form-group">
-  <%= f.label :Username %><br />
+
+<span class="customize_words">Email</span>
+<%= f.email_field :email, class: "form-control", :autofocus => true %>
+</div>
+
+<div class="form-group">
+  <span class="customize_words">Username</span>
   <%= f.text_field :username, class: "form-control",:autofocus => true %>
 </div>
 
 <div class="form-group">
-  <%= f.label :Bio %><br />
-  <%= f.text_field :bio, class: "form-control",:autofocus => true %>
+  <span class="customize_words">Location</span>
+  <%= f.text_field :location, class: "form-control", placeholder: "Where are you?", :autofocus => true %>
 </div>
 
 
-  <div class="form-group">
-    <%= f.label :Email %><br />
-  <%= f.email_field :email, class: "form-control", :autofocus => true %>
+<div class="form-group">
+
+  <span class="customize_words">Bio</span>
+  <%= f.text_field :bio, class: "form-control", placeholder: "Who are you?", :autofocus => true %>
 </div>
+
+
+
 
 
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
+<hr>
   <div class="form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <span class="customize_words">Current Password</span>
+     <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password, class: "form-control" %>
 </div>
+<hr>
+<p class="join">New Password</p>
 
   <div class="form-group">
-    <%= f.label :New_Password %> <i>(leave blank if you don't want to change it)</i><br />
+    <span class="customize_words">New Password </span>
+    <i>(leave blank if you don't want to change it)</i><br />
   <%= f.password_field :password, class: "form-control",  :autocomplete => "off" %>
 </div>
 
@@ -53,12 +67,15 @@
   <div><%= f.submit "Update", class: "btn btn-primary" %></div>
 <% end %>
 <hr>
+
+<%= link_to "About", about_path %> <%= link_to "Help", help_path %>
+ <a href="#">Blog</a> <%= link_to "Policies", policies_path %>
+
 <hr>
-<h4>Cancel my account</h4>
-
-<p>Unhappy? <%= button_to "delete my account", registration_path(resource_name), :data =>  { :confirm => "Are you sure?" }, :method => :delete , class: "btn btn-warning" %></p>
-
-<%= link_to "Back", :back %>
+<%= link_to "Terminate Account", terminate_path %>
+<br>
+<br>
+<br>
 
 </div>
 </div>

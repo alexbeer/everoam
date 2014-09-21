@@ -16,19 +16,59 @@
 
 
 }
+.terminate{
+	background-color:#e74c3c;
+}
+.terminating{
+	margin:auto;
+	height:100px;
+	width:300px;
+	text-align:center;
+	font-size:30px;
+	background-color:white;
+	color:#e74c3c;
+	outline:0;
+	border-radius:20px;
+	border:2px solid white;
+}
+
+.unhappy{
+	color:white;
+	text-align:center;
+	margin-bottom:100px;
+	margin-top:100px;
+}
+
+.prof_location{
+	font-size:14px;
+	font-weight:lighter;
+	font-family:helvetica;
+}
+
+.prof_bio{
+	font-size:16px;
+}
+
+.settings_header{
+	font-family:helvetica;
+	font-size:30px;
+	font-weight:lighter;
+	text-align:center;
+}
+.customize_words{
+	font-family:helvetica;
+	font-size:14px;
+	color:#e74c3c;
+}
 
 
 #betatag{
-
-
 	height:60px;
 	line-height:65px;
 	margin-left:10px;
 	font-size:14px;
 	float:left;
 	color:black;
-
-
 }
 .home_image{
 	background:image-url('foggylake.jpg')  no-repeat center center fixed;

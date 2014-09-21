@@ -1,0 +1,11 @@
+<body class="terminate">
+
+
+<h1 class="unhappy">Unhappy?</h1>
+<div class="center">
+<p><%= button_to "Delete My Account", registration_path(resource_name),
+:data =>  { :confirm => "Are you sure?" }, :method => :delete , class: "terminating" %></p>
+</div>
+<h1 class="unhappy">We Will Miss You</h1>
+
+</body>

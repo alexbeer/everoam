@@ -22,6 +22,8 @@ root "pages#home"
 
   get 'help', to: 'pages#help'
 
+  get 'terminate', to: 'pages#terminate'
+
   get 'discover', to: 'pages#discover'
 
   get '/:id', to: 'profiles#show'
