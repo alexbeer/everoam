@@ -3,8 +3,8 @@
 
 
 <div class="container">
-<div class="top_word">
-  Latest Roams
+<div class="index_top_word">
+  Explore and Discover
 </div>
 
 
@@ -12,9 +12,11 @@
 <% if user_signed_in? %>
   <%= link_to 'New Roam', new_roam_path, class: "btn btn-primary" %>
 <%end%>
+
+
+
 <hr>
 <br>
-
 <div id="roams" class="transitions-enabled">
     <% @roams.each do |roam| %>
       <div class="box panel panel-default">

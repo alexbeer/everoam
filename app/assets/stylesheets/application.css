@@ -12,85 +12,6 @@
  *= require 'masonry/transitions'
  *= require_tree .
  */
-#display_on_home_push_down{
-	height:33px;
-}
-
-
-#display_on_home{
-	background-color:rgba(240,240,240,.6);
-	width:290px;
-	margin-left:10px;
-
-}
-
-#featured_box{
-	height:480px;
-	width:450px;
-	float:right;
-	text-align:center;
-	margin-right:10%;
-}
-
-.featured_pic1{
-	float:left;
-	width:160px;
-	height:138px;
-	background-color:rgba(240,240,240,.3);
-}
-.featured_pic2{
-	float:left;
-	width:160px;
-	height:138px;
-	background-color:rgba(240,240,240,.3);
-}
-.featured_pic3{
-	float:left;
-	width:160px;
-	height:138px;
-	background-color:rgba(240,240,240,.3);
-}
-
-.featured{
-	float:right;
-	width:400px;
-	height:138px;
-	background-color:rgba(200,200,200,.4);;
-	margin-top:5px;
-	margin-right:22px;
-	position:relative;
-}
-#featured_stated{
-	float:right;
-	font-size:20px;
-	text-align:center;
-	width:400px;
-	margin-right:22px;
-	font-family:helvetica;
-
-
-}
-
-.display_on_home_top{
-	height:70px;
-	font-size:30px;
-	background-color:rgba(240,240,240,.1);
-	text-align:center;
-	line-height:70px;
-	border-bottom:1px solid gray;
-	font-weight:lighter;
-}
-
-.display_on_home_navs{
-	height:70px;
-	background-color:rgba(240,240,240,.3);
-	line-height:70px;
-	text-align:center;
-	font-size:20px;
-	border-bottom:1px solid grey;
-	font-weight:400;
-}
-
 
 .center{
 	text-align:center;
@@ -144,11 +65,11 @@
 	background-color:rgba(240,240,240,.7);
 	border:1px solid rgba(210,210,210,.9) ;
 }
-
 .edit_registrations{
 	margin:auto;
 	margin-top:40px;
-	width:500px;
+	width:50%;
+	min-width:300px;
 }
 .twelve{
 	font-size:10px;
