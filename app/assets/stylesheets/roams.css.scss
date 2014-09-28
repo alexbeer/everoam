@@ -65,3 +65,22 @@ height:23px;
 width:17px;
 line-height:20px;
 }
+
+.modal-body{
+	height:300px;
+	width:500px;
+	background-color:#e74c3c;
+	color:white;
+	font-size:20px;
+	font-family:helvetica;
+	font-weight:lighter;
+	border-radius:10px;
+	border:2px solid rgba(10,10,10,.5);
+}
+.gears{
+	font-size:30px;
+	color:black;
+}
+.loading{
+	font-size:50px;
+}
