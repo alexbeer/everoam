@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.roam_show{
+	font-family:helvetica;
+	font-weight:lighter;
+}
+
 #roams{
 	margin: 0 auto;
 }
@@ -46,10 +51,6 @@ button:focus{
 
 .btn:focus{
 	outline:0;
-}
-
-.margin-left_caption{
-	margin-left:10%;
 }
 
 .user_and_edit{
