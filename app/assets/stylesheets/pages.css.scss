@@ -2,6 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.coming_soon{
+
+	font-size:80px;
+	font-family:helvetica;
+	font-weight:lighter;
+	color:white;
+
+
+
+
+}
+
+.aplace{
+	font-size:40px;
+}
+
+.aplace a{
+	color:white;
+	text-decoration:underline;
+
+}
+.aplace a:hover{
+	text-decoration:none;
+	color:white;
+}
+
+#sooneveroam{
+	padding-left:20px;
+	font-family:helvetica;
+	font-weight:lighter;
+	font-size:75px;
+	margin:auto;
+	background-color:#e74c3c;
+	margin-top:10px;
+}
+
+.sooncenter{
+	width:930px;
+	margin:auto;
+
+
+}
+
+
+
+
+
+
+
 #banner{
 	height:50px;
 	line-height:50px;
