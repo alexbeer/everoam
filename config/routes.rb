@@ -14,7 +14,7 @@ Everoam2::Application.routes.draw do
   end
 
 
-root "pages#comingsoon"
+root "roams#index"
 
   get 'policies', to: 'pages#policies'
 
