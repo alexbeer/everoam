@@ -1,5 +1,5 @@
 
-<%= form_for(@roam) do |f| %>
+<%= form_for(@roam, html: { class: 'roam' }) do |f| %>
   <% if @roam.errors.any? %>
     <div id="error_explanation">
       <h2>Hold Up!</h2>
@@ -27,136 +27,36 @@
   </div>
 
 
+<%= f.hidden_field 'image_ids', value: @roam.image_ids.join(',') %>
+<% @roam.images.each do |image| %>
+  <p>
+    <%= image_tag image.image.url(:thumb) %>
+    <button type="button" class="roundbutton delete_image_button" data-id="<%= image.id %>">
+      Delete image
+    </button>
+  </p>
+<% end %>
 
+<p id="image_fields">
+  <%= file_field_tag :image, class: "custom-file-input", 'data-url' => roams_image_path  %>
+  <br>
+  <%= text_field_tag :caption, '', class: "form-control caption", placeholder: "Caption", style: 'display: none' %>
+  <br>
+  <button type="button" class="roundbutton" id="save_image_button" style="display: none">
+    Save image <%= image_tag 'loading.gif', style: 'display:none', class: 'loading' %>
+  </button>
+  <button type="button" class="roundbutton" id="delete_image_button" data-id="" style="display: none">
+    Delete image
+  </button>
+</p>
 
-
-
-
-
-<br>
-    <%= f.file_field :image, class: "custom-file-input"  %>
-<br>
-    <%= f.text_field :description, class: "form-control", placeholder: "Caption" %>
-
-
-<br>
-
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo2">
+<button type="button" class="roundbutton" id="add_image_fields">
   <div class="plus">+</div>
 </button>
-  <div id="demo2" class="collapse">
-<br>
-  <%= f.file_field :imagetwo, class: "custom-file-input" %>
-<br>
-  <%= f.text_field :descriptiontwo, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo3">
-<div class="plus">+</div>
-</button>
-</div>
 
 
-
-<div id="demo3" class="collapse">
 <br>
-    <%= f.file_field :imagethree, class: "custom-file-input" %>
 <br>
-    <%= f.text_field :descriptionthree, class: "form-control", placeholder: "Caption" %>
-<br>
-    <button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo4">
-      <div class="plus">+</div>
-  </button>
-</div>
-
-
-
-<div id="demo4" class="collapse">
-<br>
-      <%= f.file_field :imagefour, class: "custom-file-input" %>
-<br>
-      <%= f.text_field :descriptionfour, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo5">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo5" class="collapse">
-<br>
-    <%= f.file_field :imagefive, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptionfive, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo6">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo6" class="collapse">
-<br>
-    <%= f.file_field :imagesix, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptionsix, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo7">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo7" class="collapse">
-<br>
-    <%= f.file_field :imageseven, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptionseven, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo8">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo8" class="collapse">
-<br>
-    <%= f.file_field :imageeight, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptioneight, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo9">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo9" class="collapse">
-<br>
-    <%= f.file_field :imagenine, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptionnine, class: "form-control", placeholder: "Caption" %>
-<br>
-<button type="button" onclick="style.display = 'none'" class="roundbutton" data-toggle="collapse" data-target="#demo10">
-<div class="plus">+</div>
-</button>
-</div>
-
-
-
-<div id="demo10" class="collapse">
-<br>
-    <%= f.file_field :imageten, class: "custom-file-input" %>
-<br>
-    <%= f.text_field :descriptionten, class: "form-control", placeholder: "Caption" %>
-<br>
-</div>
-  <br>
-  <br>
 
 <% f.submit %>
 

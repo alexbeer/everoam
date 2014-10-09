@@ -1,6 +1,8 @@
 Everoam2::Application.routes.draw do
   get "profiles/show"
   resources :roams
+  post 'roams/image', to: 'roams#create_image', as: :roams_image
+  delete 'roams/image/:id', to: 'roams#destroy_image'
 
   devise_for :users
 
@@ -27,8 +29,6 @@ root "roams#index"
   get 'discover', to: 'pages#discover'
 
   get '/:id', to: 'profiles#show'
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

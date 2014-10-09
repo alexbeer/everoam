@@ -20,7 +20,7 @@
 <div id="roams" class="transitions-enabled">
     <% @roams.each do |roam| %>
       <div class="box panel panel-default">
-        <%= link_to image_tag(roam.image.url(:medium)), roam %>
+        <%= link_to image_tag(roam.images.first.try(:image).try(:url, :medium)), roam %>
         <div class="right panel-body">
         <b><%= roam.title %></b>
         <br/>

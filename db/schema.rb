@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918034156) do
+ActiveRecord::Schema.define(version: 20141009115543) do
+
+  create_table "roam_images", force: true do |t|
+    t.integer  "roam_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "caption"
+  end
 
   create_table "roams", force: true do |t|
     t.string   "title"

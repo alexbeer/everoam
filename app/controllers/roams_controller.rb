@@ -40,6 +40,17 @@ class RoamsController < ApplicationController
     redirect_to roams_url
   end
 
+  def create_image
+    roam_image = RoamImage.create!(roam_image_params)
+    render json: roam_image
+  end
+
+  def destroy_image
+    roam_image = RoamImage.find params[:id]
+    roam_image.destroy!
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_roam
@@ -53,8 +64,10 @@ class RoamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roam_params
-      params.require(:roam).permit(:title, :location, :description, :descriptiontwo, :descriptionthree, :descriptionfour, :descriptionfive,
-        :descriptionsix, :descriptionseven, :descriptioneight, :descriptionnine, :descriptionten,
-       :image, :imagetwo, :imagethree, :imagefour, :imagefive, :imagesix, :imageseven, :imageeight, :imagenine, :imageten  )
+      params.require(:roam).permit(:title, :location, :image_ids )
+    end
+
+    def roam_image_params
+      params.permit(:image, :caption)
     end
 end

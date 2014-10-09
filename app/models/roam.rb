@@ -5,7 +5,7 @@ class Roam < ActiveRecord::Base
   	validates :user_id, presence: true
 
 	has_attached_file :image, :styles => { :large => "800x600>", :medium => "300x300>", :thumb => "100x100>" }
-		validates :image, presence: true
+		validates :images, presence: true
 
 	has_attached_file :imagetwo, :styles => { :large => "800x600>", :medium => "300x300>", :thumb => "100x100>" }
 
@@ -34,8 +34,15 @@ class Roam < ActiveRecord::Base
 	has_attached_file :imageten, :styles => { :large => "800x600>", :medium => "300x300>", :thumb => "100x100>" }
 
 
+	has_many :images, class_name: 'RoamImage', dependent: :destroy
+	accepts_nested_attributes_for :images, :allow_destroy => true
 
-
-
+	def image_ids=(val)
+		if val.is_a? String
+			super val.split(',')
+		else
+			super val
+		end
+	end
 
 end
