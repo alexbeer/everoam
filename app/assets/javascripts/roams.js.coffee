@@ -50,6 +50,7 @@ $ ->
 
   $('form.roam #add_image_fields').click ->
     p = $('form.roam #image_fields:first').clone().hide()
+    p.removeAttr('data-id');
     p.find('input.caption').val('')
     p.find('img.loading').hide()
     setupFileUpload p.find('input.custom-file-input')
