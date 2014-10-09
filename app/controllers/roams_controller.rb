@@ -41,7 +41,13 @@ class RoamsController < ApplicationController
   end
 
   def create_image
-    roam_image = RoamImage.create!(roam_image_params)
+    if params[:id]
+      roam_image = RoamImage.find(params[:id])
+      roam_image.update!(roam_image_params)
+    else
+      roam_image = RoamImage.create!(roam_image_params)
+    end
+    
     render json: roam_image
   end
 

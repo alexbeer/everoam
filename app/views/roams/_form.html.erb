@@ -40,7 +40,7 @@
 <p id="image_fields">
   <%= file_field_tag :image, class: "custom-file-input", 'data-url' => roams_image_path  %>
   <br>
-  <%= text_field_tag :caption, '', class: "form-control caption", placeholder: "Caption", style: 'display: none' %>
+  <%= text_field_tag :caption, '', class: "form-control caption", placeholder: "Caption" %>
   <br>
   <button type="button" class="roundbutton" id="save_image_button" style="display: none">
     Save image <%= image_tag 'loading.gif', style: 'display:none', class: 'loading' %>

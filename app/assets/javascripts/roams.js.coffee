@@ -20,16 +20,20 @@ setupFileUpload = (el) ->
     autoUpload: false
     replaceFileInput: false
     formData: (form) ->
-      [{ name: 'caption', value: $(el).siblings('input.caption:first').val() }]
+      data = [{ name: 'caption', value: $(el).siblings('input.caption:first').val() }]
+      id = $(el).parent().attr('data-id')
+      if id
+        data.push { name: 'id', value: id }
+      data
     done: (e, data) ->
       ids = $('input#roam_image_ids').val().split(',')
       ids.shift() if ids[0] == ''
       ids.push data.result.id
       $('input#roam_image_ids').val(ids.join(','))
       $(el).parent().find('img.loading').hide()
+      $(el).parent().attr('data-id', data.result.id)
       console.log data.result
     add: (e, data) ->
-      $(el).siblings('input.caption').show()
       $(el).siblings('#save_image_button').show().click ->
         $(el).parent().find('img.loading').show()
         data.submit()
