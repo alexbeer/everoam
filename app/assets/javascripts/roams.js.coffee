@@ -97,6 +97,13 @@ $ ->
 
   setupFileUpload $('form.roam input.custom-file-input:first')
 
+  limitNumImages = ->
+    numImages = $('form.roam .images-fields').length
+    if numImages > 9
+      $('form.roam #add_image_fields').hide()
+
+  limitNumImages()
+
   $('form.roam #add_image_fields').click ->
     n = $('form.roam .images-fields').length
     p = $('form.roam .images-fields:first').clone().hide()
@@ -114,3 +121,5 @@ $ ->
     setupFileUpload p.find('input.custom-file-input')
     p.insertBefore(this)
     p.slideDown()
+
+    limitNumImages()
