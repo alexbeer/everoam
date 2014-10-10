@@ -25,33 +25,30 @@ setupFileUpload = (field) ->
       {
         action: 'loadImage',
         fileTypes: /^image\/(gif|jpeg|png)$/,
-        maxFileSize: 20000000,
+        maxFileSize: 20000000
       }, {
         action: 'resizeImage',
-        minWidth: 800,
-        minHeight: 600,
         maxWidth: 800,
         maxHeight: 600,
+        forceResize: true
       }, {
         action: 'saveImage'
       }, {
         action: 'duplicateImage'
       }, {
         action: 'resizeImage',
-        minWidth: 300,
-        minHeight: 300,
-        maxidth: 300,
+        maxWidth: 300,
         maxHeight: 300,
+        forceResize: true
       }, {
         action: 'saveImage'
       }, {
         action: 'duplicateImage'
       }, {
         action: 'resizeImage',
-        minWidth: 100
-        minHeight: 100
-        maxWidth: 100
-        maxHeight: 100
+        maxWidth: 100,
+        maxHeight: 100,
+        forceResize: true
       }, {
         action: 'saveImage'
       }
