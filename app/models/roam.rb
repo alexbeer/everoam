@@ -1,6 +1,9 @@
 class Roam < ActiveRecord::Base
 	belongs_to :user
 
+	has_many :images, class_name: 'RoamImage', dependent: :destroy
+	accepts_nested_attributes_for :images, :allow_destroy => true
+
  	 default_scope -> { order('created_at DESC') }
   	validates :user_id, presence: true
 
@@ -32,17 +35,4 @@ class Roam < ActiveRecord::Base
 
 
 	has_attached_file :imageten, :styles => { :large => "800x600>", :medium => "300x300>", :thumb => "100x100>" }
-
-
-	has_many :images, class_name: 'RoamImage', dependent: :destroy
-	accepts_nested_attributes_for :images, :allow_destroy => true
-
-	def image_ids=(val)
-		if val.is_a? String
-			super val.split(',')
-		else
-			super val
-		end
-	end
-
 end
