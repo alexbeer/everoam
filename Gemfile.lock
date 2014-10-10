@@ -72,9 +72,6 @@ GEM
       turbolinks
     jquery-ui-rails (5.0.0)
       railties (>= 3.2.16)
-    jquery.fileupload-rails (1.10.1)
-      jquery-ui-rails (~> 5.0)
-      railties (>= 3.1)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -165,7 +162,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  jquery.fileupload-rails
+  jquery-ui-rails
   masonry-rails (~> 0.2.0)
   paperclip (~> 3.0)
   pg
