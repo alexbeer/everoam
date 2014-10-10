@@ -3,6 +3,7 @@ class RoamsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+  include S3PresignedPost
 
   def index
     @roams = Roam.all.paginate(:page => params[:page], :per_page => 12)
@@ -13,9 +14,12 @@ class RoamsController < ApplicationController
 
   def new
     @roam = current_user.roams.build
+    @roam.images.build
+    @s3_presigned_posts = (1..30).map { |i| s3_presigned_post('roams') }
   end
 
   def edit
+    @s3_presigned_posts = (1..30).map { |i| s3_presigned_post('roams') }
   end
 
   def create
@@ -40,23 +44,6 @@ class RoamsController < ApplicationController
     redirect_to roams_url
   end
 
-  def create_image
-    if params[:id]
-      roam_image = RoamImage.find(params[:id])
-      roam_image.update!(roam_image_params)
-    else
-      roam_image = RoamImage.create!(roam_image_params)
-    end
-    
-    render json: roam_image
-  end
-
-  def destroy_image
-    roam_image = RoamImage.find params[:id]
-    roam_image.destroy!
-    render nothing: true
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_roam
@@ -70,10 +57,6 @@ class RoamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roam_params
-      params.require(:roam).permit(:title, :location, :image_ids )
-    end
-
-    def roam_image_params
-      params.permit(:image, :caption)
+      params.require(:roam).permit(:title, :location, images_attributes: [:id, :image_large_url, :image_medium_url, :image_thumb_url, :caption, :_destroy] )
     end
 end

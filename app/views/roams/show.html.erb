@@ -12,7 +12,7 @@
 <br>
 
 <% @roam.images.each do |image| %>
-  <%= image_tag image.image.url(:large) %>
+  <%= image_tag image.image_large_url %>
   <br><br>
   <div class="caption_contain">
     <p><%= image.caption %></p>

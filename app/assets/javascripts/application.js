@@ -12,10 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require load-image.all.min
+//= require canvas-to-blob.min
+//= require jquery.iframe-transport
+//= require jquery.fileupload
+//= require jquery.fileupload-process
+//= require jquery.fileupload-image
 //= require bootstrap
 //= require jquery.turbolinks
 //= require turbolinks
 //= require masonry/jquery.masonry
-//= require jquery.fileupload
 
 //= require_tree .
