@@ -7,6 +7,27 @@ $.blueimp.fileupload.prototype.processActions.duplicateImage = (data, options) -
     data.files.push(data.files[data.index])
   data
 
+$.blueimp.fileupload.prototype.processActions.scaleDown2 = (data, options) ->
+  return data unless data.canvas || data.img
+
+  that = this
+
+  resizeByHalf = (data) ->
+    img = data.canvas || data.img
+    newWidth = Math.floor(img.width / 2)
+    newHeight = Math.floor(img.height / 2)
+
+    if newWidth > options.maxWidth || newHeight > options.maxHeight
+      opts = $.extend({}, options, { maxWidth: newWidth, maxHeight: newHeight, forceResize: true })
+      that.processActions.resizeImage(data, opts).done (newData) ->
+        data = newData
+        resizeByHalf(data)
+    else
+      opts = $.extend({}, options, { forceResize: true })
+      that.processActions.resizeImage(data, opts)
+
+  return resizeByHalf(data)
+
 setupFileUpload = (field) ->
   $(field).fileupload
     url: s3PresignedPosts[0].url
@@ -27,28 +48,25 @@ setupFileUpload = (field) ->
         fileTypes: /^image\/(gif|jpeg|png)$/,
         maxFileSize: 20000000
       }, {
-        action: 'resizeImage',
+        action: 'scaleDown2',
         maxWidth: 800,
-        maxHeight: 600,
-        forceResize: true
+        maxHeight: 600
       }, {
         action: 'saveImage'
       }, {
         action: 'duplicateImage'
       }, {
-        action: 'resizeImage',
+        action: 'scaleDown2',
         maxWidth: 300,
-        maxHeight: 300,
-        forceResize: true
+        maxHeight: 300
       }, {
         action: 'saveImage'
       }, {
         action: 'duplicateImage'
       }, {
-        action: 'resizeImage',
+        action: 'scaleDown2',
         maxWidth: 100,
-        maxHeight: 100,
-        forceResize: true
+        maxHeight: 100
       }, {
         action: 'saveImage'
       }
