@@ -35,7 +35,7 @@
     <% unless ff.object.image_thumb_url.blank? %>
       <%= image_tag ff.object.image_thumb_url %>
     <% end %>
-
+    <br>
     <%= file_field_tag 'image', class: 'custom-file-input' %>
     <%= ff.hidden_field :image_large_url %>
     <%= ff.hidden_field :image_medium_url %>
