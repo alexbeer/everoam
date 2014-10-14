@@ -80,9 +80,9 @@ Everoam2::Application.configure do
 
   #for heroku
   #set to actual host... such as everoam.com!
-   config.action_mailer.default_url_options = { :host => 'everoam.herokuapp.com' }
+   config.action_mailer.default_url_options = { :host => 'everoam.com' }
 
-  Rails.application.routes.default_url_options[:host] = 'everoam.herokuapp.com'
+  Rails.application.routes.default_url_options[:host] = 'everoam.com'
 
    config.action_mailer.delivery_method = :smtp
    config.action_mailer.perform_deliveries = true
