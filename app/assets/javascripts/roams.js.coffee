@@ -49,8 +49,8 @@ setupFileUpload = (field) ->
         maxFileSize: 20000000
       }, {
         action: 'scaleDown2',
-        maxWidth: 925,
-        maxHeight: 650
+        maxWidth: 900,
+        maxHeight: 600
       }, {
         action: 'saveImage'
       }, {
