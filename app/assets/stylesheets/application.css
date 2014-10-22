@@ -126,6 +126,7 @@ body a:hover{
   width:75px;
   font-size: 14px;
   color:#e74c3c;
+	margin-top:3px;
 
 }
 .custom-file-input:hover::before {

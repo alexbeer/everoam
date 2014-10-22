@@ -50,7 +50,7 @@ setupFileUpload = (field) ->
       }, {
         action: 'scaleDown2',
         maxWidth: 1000,
-        maxHeight: 600
+        maxHeight: 800
       }, {
         action: 'saveImage'
       }, {
