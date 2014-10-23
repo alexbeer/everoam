@@ -44,6 +44,7 @@
   background-color:rgba(240,240,240,.5);
 	border:1px solid rgba(20,140,20,.1);
 	margin-top:50px;
+	position:static;
 }
 .registrationspage{
 	margin:auto;
