@@ -2,6 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.roamtitle{
+	font-size:16px;
+	font-family:helvetica;
+}
+
+.gray{
+	font-weight:bold;
+	color:rgba(150,150,150,.4);
+}
+
+.title_on_show{
+	letter-spacing:1px;
+	font-size:18px;
+	font-weight:lighter;
+}
+
+.timeago{
+	font-weight:300;
+}
+
+#line{
+	height:15px;
+	border-top:2px dotted rgba(150,150,150,.4);
+	margin:auto;
+	margin-top:10px;
+}
+#line1{
+	height:5px;
+	border-bottom:2px solid rgba(240,240,240,.4);
+	margin:auto;
+	margin-top:20px;
+}
+
+.minenavs{
+	border:2px solid rgba(240,240,240,.9);
+	padding:4px;
+	margin-top:5px;
+
+}
 
 .roam_show{
 	font-family:helvetica;
@@ -73,20 +112,15 @@ line-height:20px;
 	text-align:left;
 
 }
-
 .modal-body{
 	width:500px;
 	background-color:#e74c3c;
-	color:white;
+	color:rgba(255,255,255,.1);
 	font-size:20px;
 	font-family:helvetica;
 	font-weight:lighter;
 	border-radius:10px;
 	border:2px solid rgba(10,10,10,.5);
-}
-.gears{
-	font-size:30px;
-	color:black;
 }
 .loading{
 	font-size:50px;

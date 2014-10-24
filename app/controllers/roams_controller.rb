@@ -15,11 +15,11 @@ class RoamsController < ApplicationController
   def new
     @roam = current_user.roams.build
     @roam.images.build
-    @s3_presigned_posts = (1..30).map { |i| s3_presigned_post('roams') }
+    @s3_presigned_posts = (1..300).map { |i| s3_presigned_post('roams') }
   end
 
   def edit
-    @s3_presigned_posts = (1..30).map { |i| s3_presigned_post('roams') }
+    @s3_presigned_posts = (1..300).map { |i| s3_presigned_post('roams') }
   end
 
   def create
