@@ -36,7 +36,7 @@
         <%= link_to image_tag(roam.images.first.try(:image_medium_url)), roam %>
         <div class="right panel-body">
         <div class="roamtitle"><%= roam.title %></div>
-        <br/>
+        
 
         <div id="line"></div>
         <b>
@@ -45,7 +45,7 @@
 
 <div class="float_right timeago">
       <%= time_ago_in_words(roam.created_at) %> ago
-        
+
 </div>
 
 
