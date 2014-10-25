@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.index_top_word{
+	text-align:center;
+	font-family:helvetica;
+	font-weight:lighter;
+	font-size:24px;
+	width:300px;
+	margin:auto;
+	margin-top:45px;
+	position:static;
+}
+
+
+
 .roamtitle{
 	font-size:16px;
 	font-family:helvetica;
@@ -25,6 +39,7 @@
 	letter-spacing:1px;
 	font-size:16px;
 	font-weight:lighter;
+	float:left;
 }
 
 .btn-new_roam:hover{
@@ -46,7 +61,7 @@
 	height:5px;
 	border-bottom:2px solid rgba(240,240,240,.4);
 	margin:auto;
-	margin-top:20px;
+	margin-top:40px;
 }
 
 .minenavs{
