@@ -18,6 +18,20 @@
 	font-weight:lighter;
 }
 
+.btn-new_roam{
+	border:1px solid #e74c3c;
+	color:#e74c3c;
+	font-family:helvetica;
+	letter-spacing:1px;
+	font-size:16px;
+	font-weight:lighter;
+}
+
+.btn-new_roam:hover{
+	color:white;
+	background-color:#e74c3c;
+}
+
 .timeago{
 	font-weight:300;
 }
