@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010132117) do
+ActiveRecord::Schema.define(version: 20141029193851) do
 
   create_table "roam_images", force: true do |t|
     t.integer "roam_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141010132117) do
     t.string  "image_large_url"
     t.string  "image_medium_url"
     t.string  "image_thumb_url"
+    t.integer "sequence_num",     default: 0, null: false
   end
 
   create_table "roams", force: true do |t|

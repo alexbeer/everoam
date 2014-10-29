@@ -57,6 +57,6 @@ class RoamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roam_params
-      params.require(:roam).permit(:title, :location, images_attributes: [:id, :image_large_url, :image_medium_url, :image_thumb_url, :caption, :_destroy] )
+      params.require(:roam).permit(:title, :location, images_attributes: [:id, :image_large_url, :image_medium_url, :image_thumb_url, :caption, :sequence_num, :_destroy] )
     end
 end

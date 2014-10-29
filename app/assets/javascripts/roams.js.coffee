@@ -124,16 +124,21 @@ $ ->
 
   $('form.roam #add_image_fields').click ->
     n = $('form.roam .images-fields').length
+    sequence_num = parseInt($('form.roam .images-fields .sequence:last').val() || 0)
+
     p = $('form.roam .images-fields:first').clone().hide()
     p.find('input').each (i, input) ->
       newName = $(input).attr('name').replace('[0]', '[' + n + ']')
       $(input).attr('name', newName)
 
       if $(input).attr('id')
-        newId = $(input).attr('id').replace('_0_', '_' + n + ']')
+        newId = $(input).attr('id').replace('_0_', '_' + n + '_')
         $(input).attr('id', newId)
 
-      $(input).removeAttr('checked').val('')
+      if $(input).hasClass('sequence')
+        $(input).val(sequence_num + 1)
+
+      $(input).removeAttr('checked')
 
     p.find('img').remove()
     setupFileUpload p.find('input.custom-file-input')
