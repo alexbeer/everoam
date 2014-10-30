@@ -72,6 +72,10 @@
 	margin-top:40px;
 	width:50%;
 	min-width:300px;
+	background-color:rgba(240,240,240,.7);
+	padding:20px;
+	border-radius:10px;
+	padding-bottom:0px;
 }
 .twelve{
 	font-size:10px;

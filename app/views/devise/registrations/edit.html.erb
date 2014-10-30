@@ -1,3 +1,4 @@
+<body class="settings_body">
 <div class="edit_registrations">
 <p class="settings_header">Settings</p>
 <p class="join">Profile</p>
@@ -68,14 +69,19 @@
 <% end %>
 <hr>
 
-<%= link_to "About", about_path %> <%= link_to "Help", help_path %>
- <a href="http://blog.everoam.com">Blog</a> <%= link_to "Policies", policies_path %>
+<span class="other_pages"><%= link_to "about", about_path %></span>
+<span class="other_pages"><%= link_to "help", help_path %></span>
+<span class="other_pages"><a href="http://blog.everoam.com">blog</a></span>
+<span class="other_pages"><%= link_to "policies", policies_path %></span>
 
 <hr>
-<%= link_to "Terminate Account", terminate_path %>
+<%= link_to "terminate account", terminate_path %>
 <br>
 <br>
 <br>
 
 </div>
 </div>
+<br>
+<br>
+</body>

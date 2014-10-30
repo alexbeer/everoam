@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.coming_soon{
 
-	font-size:80px;
-	font-family:helvetica;
-	font-weight:lighter;
-	color:white;
-
-}
 
 .aplace{
 	font-size:40px;
@@ -24,24 +17,6 @@
 	text-decoration:none;
 	color:white;
 }
-
-#sooneveroam{
-	padding-left:20px;
-	font-family:helvetica;
-	font-weight:lighter;
-	font-size:75px;
-	margin:auto;
-	background-color:#e74c3c;
-	margin-top:10px;
-}
-
-.sooncenter{
-	width:930px;
-	margin:auto;
-
-
-}
-
 
 #banner{
 	height:50px;
@@ -98,7 +73,8 @@
 .customize_words{
 	font-family:helvetica;
 	font-size:14px;
-	color:#e74c3c;
+	color:black;
+	font-weight:bold;
 }
 
 #betatag{
@@ -163,7 +139,9 @@ background-color:rgba(240,240,240,.2);
 	font-weight:lighter;
 	letter-spacing:1px;
 }
-
+.other_pages{
+	margin-right:10px;
+}
 .others_top{
 	font-size:12px;
 	float:right;
@@ -292,4 +270,12 @@ background-color:rgba(240,240,240,.2);
 .underh{
 	font-weight:lighter;
 	font-size:16px;
+}
+
+.settings_body{
+	background:image-url('final.jpg')  no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
