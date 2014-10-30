@@ -21,7 +21,7 @@
 </div>
 
 
-
+<div class="container">
 <% if user_signed_in? %>
   <%= link_to 'New Roam', new_roam_path, class: "btn btn-new_roam" %>
 <%end%>
@@ -29,6 +29,7 @@
 
 
 <div id="line1"></div>
+</div>
 <br>
 <div id="roams" class="transitions-enabled">
     <% @roams.each do |roam| %>
