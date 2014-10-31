@@ -1,9 +1,10 @@
 <div class="container">
 <div class="page-header">
+	<div class="container-fluid">
 	<p class="join"><%= @user.name %>
-		<span class="prof_location"> <%= @user.location %> </span></p>
+	<span class="prof_location"> <%= @user.location %> </span></p>
 	<p class="prof_bio"><%= @user.bio %></p>
-
+</div>
 
 
 
@@ -17,7 +18,7 @@
 			<%= link_to image_tag(roam.images.first.try(:image_medium_url)), roam %>
 		<div class="right panel-body">
         <div class="roamtitle"><%= roam.title %></div>
-        
+
         <div id="line"></div>
 
 
