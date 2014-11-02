@@ -1,7 +1,7 @@
 <body class="settings_body">
+
+<div id="banner3">Settings</div>
 <div class="edit_registrations">
-<p class="settings_header">Settings</p>
-<p class="join">Profile</p>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>

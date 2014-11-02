@@ -44,6 +44,19 @@
 	margin-bottom:50px;
 	position:relative;
 }
+#banner3{
+	height:30px;
+	line-height:30px;
+	font-size:30px;
+	letter-spacing:2px;
+	font-weight:lighter;
+	text-align:center;
+	margin:auto;
+	color:white;
+	margin-top:50px;
+	margin-bottom:50px;
+	position:relative;
+}
 
 
 .terminate{
@@ -278,16 +291,8 @@ background-color:rgba(240,240,240,.2);
 }
 
 .sessionsregister_body{
-	background:image-url('light.jpg')  no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+background-color:#1b5e2e;
 }
 .settings_body{
-	background:image-url('darktrees.jpg')  no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+background-color:#1b5e2e;
 }
