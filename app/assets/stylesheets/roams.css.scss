@@ -5,7 +5,6 @@
 
 .triangles{
 	background:image-url('triangles.jpg') center center fixed;
-	
 	-moz-background-size: cover;
 	-o-background-size: cover;
 
@@ -91,6 +90,7 @@
   margin: 5px;
   width: 270px;
 	border:2px solid rgba(210,210,210,.4);
+	background-color:white;
 }
 .box img{
 	width:100%;
