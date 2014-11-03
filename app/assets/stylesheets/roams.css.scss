@@ -3,6 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.triangles{
+	background:image-url('triangles.jpg') center center fixed;
+	
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+}
+
 .index_top_word{
 	text-align:center;
 	font-family:helvetica;
@@ -12,6 +20,7 @@
 	margin:auto;
 	margin-top:45px;
 	letter-spacing:1px;
+
 }
 
 .roamtitle{
