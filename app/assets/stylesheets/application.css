@@ -13,6 +13,16 @@
  *= require_tree .
  */
 
+.tiptop{
+	height:3px;
+	background-color:#e74c3c;
+	font-size:2px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+}
+
+
 body{
 	min-width:810px;
 }
