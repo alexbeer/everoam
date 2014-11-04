@@ -3,15 +3,29 @@ class RoamsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
+
+
+def index
+  if params[:search]
+    @roams = Roam.search(params[:search]).order("created_at DESC")
+  else
+    @roams = Roam.all.order('created_at DESC')
+  end
+end
+
+
+
+
+
+
+
   include S3PresignedPost
 
   def index
     @roams = Roam.all.paginate(:page => params[:page], :per_page => 12)
 
   end
-
-  
-
 
   def show
   end
