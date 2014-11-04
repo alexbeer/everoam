@@ -7,7 +7,11 @@ class RoamsController < ApplicationController
 
   def index
     @roams = Roam.all.paginate(:page => params[:page], :per_page => 12)
+
   end
+
+  
+
 
   def show
   end

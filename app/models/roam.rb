@@ -16,4 +16,5 @@ class Roam < ActiveRecord::Base
 
 
 
+
 end
