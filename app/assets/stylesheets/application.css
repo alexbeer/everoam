@@ -132,7 +132,7 @@ body a:hover{
 	color:rgba(255,100,61,0.7);
   text-decoration:none;
 }
-.custom-file-input::-webkit-file-upload-button {
+.custom-file-input::-webkit-file-upload {
   visibility: hidden;
 }
 
