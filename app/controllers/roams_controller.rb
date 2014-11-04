@@ -6,14 +6,6 @@ class RoamsController < ApplicationController
 
 
 
-def index
-  if params[:search]
-    @roams = Roam.search(params[:search]).order("created_at DESC")
-  else
-    @roams = Roam.all.order('created_at DESC')
-  end
-end
-
 
 
 

@@ -13,9 +13,7 @@ class Roam < ActiveRecord::Base
 	validates :title, presence: true
 
 
-def self.search(query)
-  where("title like ?", "%#{query}%") 
-end
+
 
 
 end
