@@ -19,6 +19,7 @@
 .eighty_percent{
 	width:80%;
 	margin:auto;
+	min-width:910px;
 }
 .tiptop{
 	height:3px;
