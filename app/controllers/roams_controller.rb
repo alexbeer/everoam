@@ -11,7 +11,6 @@ class RoamsController < ApplicationController
 
 
 
-
   include S3PresignedPost
 
   def index
