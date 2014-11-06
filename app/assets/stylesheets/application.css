@@ -15,6 +15,11 @@
 
 
 
+
+.eighty_percent{
+	width:80%;
+	margin:auto;
+}
 .tiptop{
 	height:3px;
 	background-color:#e74c3c;
@@ -27,6 +32,10 @@
 .contain_width{
 	width:900px;
 	margin:auto;
+}
+
+body{
+	min-width:910px;
 }
 
 .center{

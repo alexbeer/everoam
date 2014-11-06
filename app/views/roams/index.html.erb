@@ -15,34 +15,21 @@
 <% if user_signed_in? %>
 
 
-<div class="contain_width">
-<div class="index_top_word">
-  Explore and Discover
-</div>
+<div class="eighty_percent">
+    <div class="index_top_word">
+      Explore and Discover
+    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-<div class="container-fluid">
-<% if user_signed_in? %>
-  <%= link_to 'New Roam', new_roam_path, class: "btn btn-new_roam" %>
-<%end%>
+  <% if user_signed_in? %>
+      <%= link_to 'New Roam', new_roam_path, class: "btn btn-new_roam" %>
+  <%end%>
 
   <div id="line1"></div>
-
 </div>
-
-
 <br>
-
+<div class="contain_width">
 <div id="roams" class="transitions-enabled">
     <% @roams.each do |roam| %>
       <div class="box">
@@ -88,10 +75,11 @@
 
 </div>
 
-</div>
+
 
 <br>
 <br>
+</div>
 <% else %>
 
 
@@ -130,7 +118,7 @@
 </div>
 
 
-
 </body>
 <%= render 'layouts/footer' %>
+
 <% end %>

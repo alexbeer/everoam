@@ -2,6 +2,8 @@ $alert-border-radius: 0px;
 
 $alert-info-bg: white;
 
+$alert-primary-color: black;
+
 $state-info-border: white;
 
 $dropdown-link-hover-bg:rgba(232,77,60,0.1);
@@ -42,7 +44,6 @@ $btn-warning-bg: #e74c3c;
 
 $input-border-radius:0px;
 
-
 $progress-bar-bg: #e74c3c;
 
 
@@ -53,7 +54,6 @@ $progress-bar-bg: #e74c3c;
 
 
 .btn-primary:hover {
-
   background-color: white;
   border:1px solid #e74c3c;
 }
