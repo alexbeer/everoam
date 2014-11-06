@@ -24,6 +24,8 @@
 
 .minn{
 	min-width:910px;
+	padding-left:2px;
+	padding-right:2px;
 }
 
 .tiptop{
@@ -133,10 +135,12 @@ body{
   letter-spacing:1px;
   font-family:helvetica;
 
+
 }
 .logo{
 	display:inline;
 	float:left;
+
 }
 .brand:hover{
 	text-decoration:none;
